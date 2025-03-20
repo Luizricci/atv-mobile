@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import {View, Text, StyleSheet} from "react-native";
 
 export default function Detalhes() {
@@ -17,19 +16,17 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    gap: 40,
   },
   title: {
     fontSize: 30,
     textDecorationLine: "underline",
   },
   subTitle: {
-    marginTop: 20,
     fontSize: 20,
     color: "red",
-    marginTop: 200,
   },
   subTitle2: {
-    marginTop: 20,
     fontSize: 20,
     color: "green",
   },

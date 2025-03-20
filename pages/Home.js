@@ -1,7 +1,12 @@
-import React, { useEffect } from "react";
-import {View, Text, TextInput, TouchableOpacity, StyleSheet,} from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+} from "react-native";
 
-export default function Home() {
+export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Persistência e Navegação</Text>
@@ -14,7 +19,7 @@ export default function Home() {
       <TouchableOpacity style={styles.button}>
         <Text style={styles.textButton}>Limpar</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Detalhes")}>
         <Text style={styles.textButton}>Detalhes</Text>
       </TouchableOpacity>
     </View>
@@ -54,10 +59,11 @@ const styles = StyleSheet.create({
   textRed: {
     color: "red",
     marginTop: 20,
-    fontSize: 15,
+    fontSize: 20,
   },
   textGreen: {
     color: "green",
     marginTop: 20,
+    fontSize: 20,
   },
 });
