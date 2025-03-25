@@ -17,6 +17,7 @@ export default function Home({ navigation }) {
       <Button text="Salvar" />
       <Button text="Limpar"/>
       <Button text="Detalhes" onPress={()=> navigation.navigate("Detalhes")} />
+      <Button text="Perfil" onPress={()=> navigation.navigate("Perfil")} />
     </View>
   );
 }
