@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
+import Button from "../components/Button";
 
 export default function Home({ navigation }) {
   return (
@@ -13,15 +14,9 @@ export default function Home({ navigation }) {
       <TextInput style={styles.input} placeholder="Digite algo" />
       <Text style={styles.textRed}>Sem persistência: Nenhum texto Salvo</Text>
       <Text style={styles.textGreen}>Texto persistido: Nenhum texto Salvo</Text>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.textButton}>Salvar</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.textButton}>Limpar</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Detalhes")}>
-        <Text style={styles.textButton}>Detalhes</Text>
-      </TouchableOpacity>
+      <Button text="Salvar" />
+      <Button text="Limpar"/>
+      <Button text="Detalhes" onPress={()=> navigation.navigate("Detalhes")} />
     </View>
   );
 }
@@ -44,18 +39,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
     padding: 10,
   },
-  button: {
-    backgroundColor: "blue",
-    padding: 10,
-    marginTop: 20,
-    width: 300,
-    display: "flex",
-    alignItems: "center",
-    borderRadius: 10,
-  },
-  textButton: {
-    color: "white",
-  },
+
   textRed: {
     color: "red",
     marginTop: 20,
