@@ -37,7 +37,7 @@ export default function Home({ navigation }) {
       <Text style={styles.textGreen}>Texto persistido: {textoPersistido}</Text>
       <Button text="Salvar" onPress={salvaTexto} />
       <Button text="Limpar" onPress={limparTexto}/>
-      <Button text="Detalhes" onPress={()=> navigation.navigate("Detalhes")} />
+      <Button text="Detalhes" onPress={() => navigation.navigate("Detalhes", { textoNaoPersistido: semPersistencia })} />
       <Button text="Perfil" onPress={()=> navigation.navigate("Perfil")} />
     </View>
   );
